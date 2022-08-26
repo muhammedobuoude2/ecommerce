@@ -6,13 +6,13 @@ class SocialButton extends StatelessWidget {
   const SocialButton(
       {Key? key,
       required this.text,
-      required this.pathIcon,
-      required this.onPressed})
+      required this.pathIcon, required this.onTap,
+      })
       : super(key: key);
 
   final String text;
   final String pathIcon;
-  final Function onPressed;
+  final Function onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +27,8 @@ class SocialButton extends StatelessWidget {
         style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(Colors.white)),
         onPressed: () {
-          onPressed();
-        },
+            onTap();
+          },
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: Center(

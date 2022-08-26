@@ -121,15 +121,15 @@ class MyTheme {
     );
   }
 
-// ThemeData get darkTheme {
-//   return ThemeData(
-//     primarySwatch: Colors.blue,
-//     primaryColor: ColorManager.instance.colorPrimary,
-//     backgroundColor: ColorManager.instance.black,
-//     fontFamily: Constants.ge_ss_two_font,
-//     scaffoldBackgroundColor: ColorManager.instance.backgroundColorDark,
+  ThemeData get darkTheme {
+    return ThemeData(
+        primarySwatch: Colors.red,
+        primaryColor: ColorManager.instance.primaryColor,
+        backgroundColor: ColorManager.instance.blackColor,
+        scaffoldBackgroundColor: ColorManager.instance.backgroundColor);
+  }
 //     appBarTheme: AppBarTheme(
-//         backgroundColor: ColorManager.instance.black,
+//         backgroundColor: ColorManager.instance.blackColor,
 //         elevation: 0,
 //         titleTextStyle: AppTextTheme.textAppThemeDark.headline4
 //             ?.copyWith(fontWeight: FontWeight.w400),
@@ -202,5 +202,6 @@ class MyTheme {
 //         ProgressIndicatorThemeData(color: ColorManager.instance.colorPrimary),
 //     // Scaffold
 //   );
+// }
 // }
 }

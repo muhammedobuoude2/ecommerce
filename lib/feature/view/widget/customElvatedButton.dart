@@ -9,6 +9,7 @@ class CustomElvatedButton extends StatelessWidget {
       {Key? key, required this.text, required this.onPressed})
       : super(key: key);
 
+
   final String text;
   final Function onPressed;
   @override
@@ -23,7 +24,7 @@ class CustomElvatedButton extends StatelessWidget {
                 backgroundColor: MaterialStateProperty.all(
               ColorManager.instance.primaryColor,
             )),
-            onPressed: onPressed(),
+            onPressed: onPressed() ,
             child: Center(
               child: Text(
                 text,
@@ -35,3 +36,6 @@ class CustomElvatedButton extends StatelessWidget {
             )));
   }
 }
+
+// {
+             

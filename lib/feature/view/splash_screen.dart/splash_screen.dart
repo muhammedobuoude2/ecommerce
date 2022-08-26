@@ -2,7 +2,7 @@
 
 import 'dart:async';
 
-import 'package:ecommerce/feature/view/auth/login_screen.dart';
+import 'package:ecommerce/feature/view/auth_view/sing_in_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -38,7 +38,7 @@ class SplashState extends State<SplashScreen> {
 
   route() {
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => const LoginScreen()));
+        context, MaterialPageRoute(builder: (context) => SingInScreen()));
   }
 
   initScreen(BuildContext context) {
