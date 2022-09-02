@@ -5,10 +5,7 @@ import 'package:ecommerce/feature/model/categroy_model.dart';
 import 'package:ecommerce/feature/view/home_view/widget_categrios_one.dart';
 import 'package:ecommerce/feature/view/widget/best_seeling.dart';
 import 'package:ecommerce/feature/view/widget/bottom_navigation.dart';
-import 'package:ecommerce/feature/view_model/home_view_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:get/state_manager.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -16,7 +13,6 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigation(),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: SingleChildScrollView(

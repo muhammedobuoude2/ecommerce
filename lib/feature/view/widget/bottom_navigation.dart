@@ -9,6 +9,7 @@ import 'package:get/get.dart';
 class BottomNavigation extends StatelessWidget {
   BottomNavigation({Key? key}) : super(key: key);
   int currentIndex = 0;
+  
   @override
   Widget build(BuildContext context) {
     return GetBuilder<HomeviewModel>(
