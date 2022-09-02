@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ecommerce/feature/core/color_manger.dart';
-import 'package:ecommerce/feature/model/user_model.dart';
+import 'package:ecommerce/feature/view/home_view/home_view.dart';
 import 'package:ecommerce/test_Page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +14,7 @@ class AuthviewModel extends GetxController {
   late String email, password, name;
 
   // final Firebase
+  // ignore: unused_field
   Map<String, dynamic>? _userData;
   TextEditingController tecEmailSingup = TextEditingController();
 
@@ -21,14 +22,10 @@ class AuthviewModel extends GetxController {
   TextEditingController tecPassword = TextEditingController();
   TextEditingController tecName = TextEditingController();
 
-  AccessToken? _accessToken;
-
   loginWithFacebook() async {
     final LoginResult result = await FacebookAuth.instance.login();
 
     if (result.status == LoginStatus.success) {
-      _accessToken = result.accessToken;
-
       final userData = await FacebookAuth.instance.getUserData();
       _userData = userData;
 
@@ -38,7 +35,7 @@ class AuthviewModel extends GetxController {
       // Once signed in, return the UserCredential
       return FirebaseAuth.instance
           .signInWithCredential(facebookAuthCredential)
-          .then((value) => (Get.offAll(() => const TestPage())));
+          .then((value) => (Get.offAll(() => const HomeView())));
     } else {}
   }
 
@@ -62,7 +59,7 @@ class AuthviewModel extends GetxController {
         password: password,
       );
 
-      Get.offAll(() => const TestPage());
+      Get.offAll(() => const HomeView());
     } on FirebaseAuthException catch (e) {
       ScaffoldMessenger.of(Get.context!).showSnackBar(SnackBar(
         action: SnackBarAction(

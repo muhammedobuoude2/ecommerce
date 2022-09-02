@@ -4,9 +4,7 @@ import 'dart:async';
 
 import 'package:ecommerce/feature/view/auth_view/sing_in_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
-
+ 
 // ignore: camel_case_types
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -38,7 +36,7 @@ class SplashState extends State<SplashScreen> {
 
   route() {
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => SingInScreen()));
+        context, MaterialPageRoute(builder: (context) => const SingInScreen()));
   }
 
   initScreen(BuildContext context) {

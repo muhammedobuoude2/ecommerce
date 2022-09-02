@@ -1,8 +1,6 @@
 import 'package:ecommerce/feature/core/color_manger.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-
+ 
 class CustomTextField extends StatelessWidget {
   const CustomTextField(
       {Key? key,
@@ -18,7 +16,7 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         width: double.infinity,
         height: 150,
         child: Column(

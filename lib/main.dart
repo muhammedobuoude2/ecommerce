@@ -1,4 +1,4 @@
-import 'package:ecommerce/feature/view/splash_screen.dart/splash_screen.dart';
+import 'package:ecommerce/feature/view/splash_view.dart/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

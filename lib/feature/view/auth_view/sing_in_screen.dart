@@ -1,5 +1,6 @@
 import 'package:ecommerce/feature/core/color_manger.dart';
 import 'package:ecommerce/feature/view/auth_view/sign_up_screen.dart';
+import 'package:ecommerce/feature/view/home_view/home_view.dart';
 import 'package:ecommerce/feature/view/widget/socialButton.dart';
 import 'package:ecommerce/feature/view_model/auth_view_model.dart';
 import 'package:ecommerce/test_Page.dart';
@@ -42,6 +43,10 @@ class _SingInScreenState extends State<SingInScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
+                        InkWell(
+                          child: const Text('home'),
+                          onTap: () => Get.to(() => const HomeView()),
+                        ),
                         Text(
                           'Welcome,',
                           style: Theme.of(context)
@@ -118,6 +123,7 @@ class _SingInScreenState extends State<SingInScreen> {
                             fontFamily: 'SFPRODISPLAYHEAVYITALIC',
                             fontSize: 14)),
                     TextFormField(
+                      obscureText: true,
                       controller: authViewModel.tecPassword,
                       validator: (password) {
                         if (!AppUtils.instance.isValidatePassword(
