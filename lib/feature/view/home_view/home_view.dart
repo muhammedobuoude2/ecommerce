@@ -16,6 +16,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomNavigation(),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: SingleChildScrollView(
